@@ -20,3 +20,14 @@ Route::patch('services/{service}/deactivate', [
     ServiceController::class,
     'deactivate',
 ]);
+
+// Customers API routes
+Route::apiResource('customers', CustomerController::class);
+Route::patch('customers/{customer}/activate', [
+    CustomerController::class,
+    'activate',
+]);
+Route::patch('customers/{customer}/deactivate', [
+    CustomerController::class,
+    'deactivate',
+]);
